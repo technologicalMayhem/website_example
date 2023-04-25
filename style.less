@@ -1,0 +1,118 @@
+.flex() {
+    display: flex;
+}
+
+.flex-center-h() {
+    justify-content: center;
+    .flex();
+}
+
+.flex-center-v() {
+    align-items: center;
+    .flex();
+}
+
+.flex-row() {
+    flex-direction: row;
+}
+
+.flex-column() {
+    flex-direction: column;
+}
+
+.flex-center() {
+    .flex-center-h();
+    .flex-center-v();
+}
+
+.no-link-decoration {
+    text-decoration: none;
+    color: inherit;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url(assets/Nunito.ttf);
+}
+
+@font-face {
+    font-family: 'Urbanist';
+    src: url(assets/Urbanist.ttf);
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 0 4px;
+    width: 100%;
+    font-size: 100%;
+    font-family: 'Nunito', sans-serif;
+    .flex-center-v();
+    .flex-column();
+}
+
+h1 h2 h3 h4 h5 h6 .header {
+    font-family: 'Urbanist', sans-serif;
+}
+
+.header {
+    .flex-center();
+    .flex-row();
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.header-item {
+    font-size: 2em;
+    text-decoration: underline;
+    margin: 0 .2em;
+}
+
+.header-left {
+    flex: 1;
+    justify-content: end;
+    .flex();
+}
+
+.header-right {
+    flex: 1;
+    justify-content: start;
+    .flex();
+}
+
+.logo-block {
+    margin: .5em 1em;
+    flex-shrink: 1;
+    width: 3em;
+    height: 3em; 
+    .flex-center();
+    .flex-column();
+    .no-link-decoration();
+    font-size: 1.25em;
+}
+
+.logo {
+    max-width: 3em;
+}
+
+.text-box {
+    max-width: 80ch;
+    margin-bottom: 2.5em;
+}
+
+.heading {
+    margin-bottom: 1em;
+}
+
+.title {
+    font-size: 2em;
+}
+
+.published {
+    font-size: .8em;
+    color: lightgray;
+}
+
+.text-box > p {
+    text-align: justify;
+}
