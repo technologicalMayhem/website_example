@@ -1,7 +1,3 @@
-.no-link-decoration {
-  text-decoration: none;
-  color: inherit;
-}
 @font-face {
   font-family: 'Nunito';
   src: url(assets/Nunito.ttf);
@@ -9,6 +5,14 @@
 @font-face {
   font-family: 'Urbanist';
   src: url(assets/Urbanist.ttf);
+}
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url(assets/JetBrainsMono-Regular.woff2);
+}
+.no-link-decoration {
+  text-decoration: none;
+  color: inherit;
 }
 body {
   background-color: #000000;
@@ -30,25 +34,20 @@ h1 h2 h3 h4 h5 h6 .header {
   display: flex;
   flex-direction: row;
   width: 100%;
-  margin-bottom: 2em;
+  margin: 1.5em 0;
 }
-.header-item {
-  font-size: 2em;
-  text-decoration: underline;
-  margin: 0 0.2em;
-}
-.header-left {
-  flex: 1;
-  justify-content: end;
+.header-side {
+  width: 12em;
+  justify-content: space-between;
+  font-size: x-large;
+  flex-direction: row;
   display: flex;
 }
-.header-right {
-  flex: 1;
-  justify-content: start;
-  display: flex;
+.header-side > div {
+  cursor: pointer;
 }
 .logo-block {
-  margin: 0.5em 1em;
+  margin: 0.5em 4ch;
   flex-shrink: 1;
   width: 3em;
   height: 3em;
